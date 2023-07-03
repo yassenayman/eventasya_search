@@ -8,6 +8,8 @@ import time
 import threading
 import streamlit as st
 import zipfile
+import streamlit as st
+
 app = Flask(__name__)
 
 # Define the path to your zipped file and the path to extract the contents to
@@ -43,4 +45,6 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Run the Flask app using Streamlit
+    st.set_page_config(page_title='Eventasya Search')
+    app.run(port=8000)
