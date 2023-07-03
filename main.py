@@ -12,17 +12,16 @@ app = Flask(__name__)
 
 # Define the path to your zipped file and the path to extract the contents to
 zip_path = 'fine_tuned_model.zip'
-extract_path = 'fine_tuned_model.h5'
+extract_path = 'fine_tuned_model'
 
 # Unzip the file
 with zipfile.ZipFile(zip_path, 'r') as zip_ref:
     zip_ref.extractall(extract_path)
 
 # Load the model from the extracted files
-model_path = f'{extract_path}/your_model.h5'
+model_path = f'{extract_path}/fine_tuned_model.h5'
 model = load_model(model_path)
 
-model = load_model('fine_tuned_model.h5')
 """lock = threading.Lock()
 def update():
     global imgs
