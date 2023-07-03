@@ -47,4 +47,4 @@ def predict():
 if __name__ == '__main__':
     # Run the Flask app using Streamlit
     st.set_page_config(page_title='Eventasya Search')
-    app.run(port=8000)
+    app.run(port=8080)
