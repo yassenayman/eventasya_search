@@ -8,3 +8,4 @@ jsonify
 requests
 keras==2.1.0
 schedule == 1.2.0
+tensorflow==2.6.0
