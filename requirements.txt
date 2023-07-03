@@ -7,5 +7,5 @@ Flask
 jsonify
 requests
 keras==2.1.0
-schedule
+schedule == 1.2.0
 threading
