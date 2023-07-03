@@ -8,5 +8,4 @@ jsonify
 requests
 keras==2.1.0
 schedule
-time
 threading
