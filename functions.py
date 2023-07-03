@@ -4,50 +4,7 @@ from keras.applications.inception_v3 import preprocess_input
 import numpy as np
 import requests
 # Create a connection object
-"""
-conn = pymysql.connect(
-    host='localhost',
-    port=3306,
-    user='root',
-    password='',
-    db='eventasya'
-)
-def extract_images(conn,model):
-    images=[]
-    target_size=(299, 299)
-    cursor = conn.cursor()
-    # Execute a SQL query to select the venue ID and image fields
-    cursor.execute("SELECT venue_id, image FROM venues_venueimages")
-    # Fetch the results
-    results = cursor.fetchall()
-    conn.commit()
-    cursor.close()
-    for result in results:
-        # Get the venue ID and image path from the result set
-        venue_id = result[0]
-        path = result[1]
-        # Download the image data
-        img = requests.get(path)
-        img_data = img.content
-        # Decode the image data into a NumPy array
-        img_array = np.frombuffer(img_data, np.uint8)
-        img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-        # Convert the image to a NumPy array
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        img_resized = cv2.resize(img, target_size)
-        images.append(img_resized)
-        # Add the ID and image to the dictionary
-    imgs=preprocess_dataset(images, model)
-    # Create a dictionary to store the ID and preprocessed image for each row
-    id_image_dict = {}
-    for i in range(len(imgs)):
-        # Get the venue ID from the corresponding result
-        venue_id = results[i][0]
-        # Add the ID and preprocessed image to the dictionary
-        id_image_dict[venue_id] = imgs[i]
-    return id_image_dict
-# Preprocess dataset
-"""
+
 def preprocess_request(file):
     target_size = (299, 299)
     img = cv2.imdecode(np.frombuffer(file, np.uint8), cv2.IMREAD_COLOR)
