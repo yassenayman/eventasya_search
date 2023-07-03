@@ -1,0 +1,12 @@
+pymysql
+cv2
+keras.applications.inception_v3
+numpy
+requests
+flask
+jsonify
+request
+keras
+schedule
+time
+threading
