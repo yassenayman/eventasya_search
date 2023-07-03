@@ -4,6 +4,7 @@ from keras.applications.inception_v3 import preprocess_input
 import numpy as np
 import requests
 # Create a connection object
+"""
 conn = pymysql.connect(
     host='localhost',
     port=3306,
@@ -46,7 +47,7 @@ def extract_images(conn,model):
         id_image_dict[venue_id] = imgs[i]
     return id_image_dict
 # Preprocess dataset
-
+"""
 def preprocess_request(file):
     target_size = (299, 299)
     img = cv2.imdecode(np.frombuffer(file, np.uint8), cv2.IMREAD_COLOR)
