@@ -9,3 +9,4 @@ requests
 keras==2.1.0
 schedule == 1.2.0
 tensorflow
+typing_extensions==3.10.0.2
