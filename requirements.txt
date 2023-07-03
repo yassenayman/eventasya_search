@@ -1,12 +1,12 @@
 pymysql
-cv2
-keras.applications.inception_v3
+opencv-python-headless
+keras-applications==1.0.8
 numpy
-requests== 2.28.2
-flask
+requests==2.28.2
+Flask
 jsonify
-request
-keras == 2.11.0
+requests
+keras==2.1.0
 schedule
 time
 threading
