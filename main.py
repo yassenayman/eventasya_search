@@ -22,21 +22,7 @@ with zipfile.ZipFile(zip_path, 'r') as zip_ref:
 model_path = f'{extract_path}/fine_tuned_model.h5'
 model = load_model(model_path)
 
-"""lock = threading.Lock()
-def update():
-    global imgs
-    imgs = functions.extract_images(functions.conn, model)
 
-#schedule.every(10).seconds.do(update)
-
-while True:
-    schedule.run_pending()
-    time.sleep(1)
-# Start the scheduled job before running the Flask app
-scheduled_job_thread = threading.Thread(target=scheduled_job)
-scheduled_job_thread.daemon = True
-scheduled_job_thread.start()
-"""
 # Define a route for making predictions
 global imgs
 imgs={}
