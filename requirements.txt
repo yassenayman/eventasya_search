@@ -2,11 +2,11 @@ pymysql
 cv2
 keras.applications.inception_v3
 numpy
-requests
+requests= 2.28.2
 flask
 jsonify
 request
-keras
+keras = 2.11.0
 schedule
 time
 threading
