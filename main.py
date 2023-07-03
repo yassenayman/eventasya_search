@@ -23,12 +23,12 @@ model_path = f'{extract_path}/your_model.h5'
 model = load_model(model_path)
 
 model = load_model('fine_tuned_model.h5')
-lock = threading.Lock()
+"""lock = threading.Lock()
 def update():
     global imgs
     imgs = functions.extract_images(functions.conn, model)
 
-schedule.every(10).seconds.do(update)
+#schedule.every(10).seconds.do(update)
 
 while True:
     schedule.run_pending()
@@ -37,8 +37,12 @@ while True:
 scheduled_job_thread = threading.Thread(target=scheduled_job)
 scheduled_job_thread.daemon = True
 scheduled_job_thread.start()
-
+"""
 # Define a route for making predictions
+global imgs
+imgs={}
+imgs={1:[0.00830947, 0.10077339, 0.47513428, 0.41578284], 10: [0.02004314, 0.24340728, 0.5684739 , 0.1680757 ] 789: [0.01972592, 0.09381499, 0.6248155 , 0.26164353]}
+
 @app.route('/predict', methods=['POST'])
 def predict():
     # Load the image file from the request
