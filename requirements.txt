@@ -1,6 +1,6 @@
 pymysql
 opencv-python-headless
-keras-applications==1.0.8
+keras-applications
 numpy
 requests==2.28.2
 Flask
@@ -8,4 +8,4 @@ jsonify
 requests
 keras==2.1.0
 schedule == 1.2.0
-tensorflow==2.6.0
+tensorflow
