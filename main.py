@@ -8,7 +8,6 @@ import time
 import threading
 import streamlit as st
 import zipfile
-import streamlit as st
 
 app = Flask(__name__)
 
