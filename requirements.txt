@@ -11,3 +11,4 @@ schedule
 tensorflow
 typing-extensions
 click
+gunicorn
