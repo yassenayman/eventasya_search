@@ -46,3 +46,6 @@ def display_id(result):
         if (d< 0.5):
             ids.append(k)
     return ids
+# Start the Flask application server
+if __name__ == '__main__':
+    app.run()
