@@ -11,8 +11,8 @@ import zipfile
 app = Flask(__name__)
 
 # Define the path to your zipped file and the path to extract the contents to
-zip_path = 'fine_tuned_model.zip'
-extract_path = 'fine_tuned_model'
+zip_path = 'https://github.com/yassenayman/eventasya_search/blob/main/fine_tuned_model.zip'
+extract_path = 'https://github.com/yassenayman/eventasya_search/tree/main'
 
 # Unzip the file
 with zipfile.ZipFile(zip_path, 'r') as zip_ref:
