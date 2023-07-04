@@ -11,15 +11,15 @@ import zipfile
 app = Flask(__name__)
 
 # Define the path to your zipped file and the path to extract the contents to
-zip_path = 'https://github.com/yassenayman/eventasya_search/blob/main/fine_tuned_model.zip'
-extract_path = 'https://github.com/yassenayman/eventasya_search/tree/main'
+zip_path = 'https://raw.githubusercontent.com/yassenayman/eventasya_search/main/fine_tuned_model.zip'
+# Download the contents of the ZIP file
+response = requests.get(zip_path)
 
-# Unzip the file
-with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-    zip_ref.extractall(extract_path)
+# Extract the contents of the ZIP file to a directory
+with zipfile.ZipFile(io.BytesIO(response.content)).extractall('fine_tuned_model')
 
 # Load the model from the extracted files
-model_path = f'{extract_path}/fine_tuned_model.h5'
+model_path = 'fine_tuned_model/fine_tuned_model.h5'
 model = load_model(model_path)
 
 
