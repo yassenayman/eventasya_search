@@ -6,7 +6,6 @@ import numpy as np
 import schedule
 import time
 import threading
-import streamlit as st
 import zipfile
 
 app = Flask(__name__)
@@ -43,7 +42,6 @@ def predict():
     return jsonify({'venue_ids': ids})
 
 
+# Start the Flask application server
 if __name__ == '__main__':
-    # Run the Flask app using Streamlit
-    st.set_page_config(page_title='Eventasya Search')
-    app.run(port=8888)
+    app.run()
